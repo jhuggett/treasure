@@ -15,10 +15,13 @@ export abstract class Node {
         this.manager ? "exists" : "does not exist"
       }`
     );
+    this.onPositionChange?.();
     if (this.manager) {
       this.manager.onNodeMoved();
     }
   }
+
+  onPositionChange?: () => void;
 
   assignManager(manager: NodeManager) {
     this.manager = manager;

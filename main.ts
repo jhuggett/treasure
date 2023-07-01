@@ -114,7 +114,23 @@ const requestMapRender = () => {
       landLayer.bufferedWriteCharacter(point);
     });
   });
+
+  displayInfo();
+
   shell.render();
+};
+
+const displayInfo = () => {
+  infoLayer.clear();
+  infoLayer.moveCursorTo({ x: "start", y: "start" });
+
+  if (ship.lastDirection) {
+    infoLayer.moveCursorHorizontally(4);
+    infoLayer.moveCursorVertically(2);
+    infoLayer.bufferedWriteString(
+      ` bearing due -( ${ship.lastDirection.toUpperCase()} )-`
+    );
+  }
 };
 
 class ProgramContext {
@@ -131,10 +147,12 @@ const mainLayer = shell.getBoxRepresentation();
 
 const { left, right } = mainLayer.splitHorizontally();
 
-const { top } = left.splitVertically({});
+const { top, bottom } = left.splitVertically({});
 
 const waterLayer = top.newLayer({});
 const landLayer = waterLayer.newLayer({});
+
+const infoLayer = bottom.newLayer({});
 
 const debugLayer = right.newLayer({});
 export const debug = {
@@ -160,7 +178,7 @@ camera.onMove = requestMapRender;
 const ship = new Ship(new Coordinate(5, 5));
 nodeManager.addNode(ship);
 
-nodeManager.onChange = () => {
+ship.onPositionChange = () => {
   camera.centerOnNode(ship);
 };
 
@@ -175,6 +193,8 @@ generateMap((msg) => {
   nodeManager.bulkAddNodes(nodes);
 
   debug.log("Map generated.");
+
+  requestMapRender();
 });
 
 await inputLoop(programContext, camera);

@@ -17,8 +17,12 @@ export class Ship extends Node {
       return;
     }
 
+    this.lastDirection = direction;
+
     this.setPosition(newPosition);
   }
+
+  lastDirection?: CompassDirection;
 
   sprite() {
     return [
