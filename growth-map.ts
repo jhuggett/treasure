@@ -78,7 +78,7 @@ export class GrowthMap {
   growToSize(size: number, callback?: (point: GrowthPointData) => void) {
     let count = 0;
     while (count < size) {
-      for (let i = this.random.getRandomNumber(25, 100); i--; ) {
+      for (let i = this.random.getRandomNumber(50, 200); i--; ) {
         if (count >= size) {
           break;
         }
@@ -89,7 +89,7 @@ export class GrowthMap {
         count += growth;
       }
 
-      for (let i = this.random.getRandomNumber(25, 100); i--; ) {
+      for (let i = this.random.getRandomNumber(50, 200); i--; ) {
         if (count >= size) {
           break;
         }

@@ -18,7 +18,7 @@ export class Ship extends Node {
       if (collidedNode.value instanceof RiverNode) {
         debug.log("River detected!");
       } else {
-        return;
+        // return;
       }
     }
 
