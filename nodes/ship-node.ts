@@ -1,6 +1,5 @@
 import { CompassDirection } from "../coordinate.ts";
 import { debug } from "../main.ts";
-import { RiverNode } from "./map/river-node.ts";
 import { Node } from "./node.ts";
 
 export class Ship extends Node {
@@ -15,11 +14,7 @@ export class Ship extends Node {
     const collidedNode = this.manager?.checkCollision(newPosition);
     if (collidedNode) {
       debug.log("Collision detected!");
-      if (collidedNode.value instanceof RiverNode) {
-        debug.log("River detected!");
-      } else {
-        // return;
-      }
+      return;
     }
 
     this.lastDirection = direction;

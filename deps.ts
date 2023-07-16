@@ -12,11 +12,15 @@ export {
   UnknownKeyCodeError,
   XYSet,
   combine,
-} from "https://raw.githubusercontent.com/jhuggett/terminal/1.0.6/mod.ts";
+  PointGrid,
+  TargetMap
+} from "../terminal/mod.ts";
 export type {
   Point,
   XY,
-} from "https://raw.githubusercontent.com/jhuggett/terminal/1.0.6/mod.ts";
+  UserInputTargets,
+
+} from "../terminal/mod.ts";
 
 export { KDTree } from "../structures-and-algorithms/mod.ts";
 export type { KDTreeInput } from "../structures-and-algorithms/mod.ts";

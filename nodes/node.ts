@@ -9,6 +9,9 @@ export abstract class Node {
   constructor(private position: Coordinate, protected manager?: NodeManager) {}
 
   setPosition(position: Coordinate) {
+    if (!position) {
+      throw new Error("Node::setPosition: no position provided");
+    }
     this.position = position;
     debug.log(
       `Node moved to ${this.position.asString}, manager ${

@@ -25,6 +25,10 @@ export class NodeManager {
     this.onChange?.();
   }
 
+  get allNodes() {
+    return this.nodes;
+  }
+
   bulkAddNodes(nodes: Node[]) {
     this.nodes.push(...nodes);
     this.rebalance();
