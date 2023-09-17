@@ -56,7 +56,7 @@ export class NodeManager {
   // NEED TO SET UP A DEBUG WINDOW.
 
   checkCollision(coordinate: Coordinate) {
-    return this.tree.find(coordinate.asArray);
+    return this.tree.find(coordinate.asArray)?.value;
   }
 
   nodesWithin(start: Coordinate, end: Coordinate) {

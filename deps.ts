@@ -13,13 +13,15 @@ export {
   XYSet,
   combine,
   PointGrid,
-  TargetMap
+  TargetMap,
+  select,
 } from "../terminal/mod.ts";
 export type {
   Point,
   XY,
   UserInputTargets,
-
+  Shell,
+  Key,
 } from "../terminal/mod.ts";
 
 export { KDTree } from "../structures-and-algorithms/mod.ts";

@@ -1,5 +1,4 @@
 import { Coordinate } from "./coordinate.ts";
-import { debug } from "./main.ts";
 import { Node } from "./nodes/node.ts";
 
 export class Camera {
@@ -29,7 +28,6 @@ export class Camera {
   }
 
   moveTo(coordinate: Coordinate) {
-    debug.log(`Moving camera to ${coordinate.asString}`);
     this.position = coordinate;
     this.onMove?.();
   }

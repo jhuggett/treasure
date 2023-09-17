@@ -1,8 +1,12 @@
 import { Node } from "../node.ts";
 
 export class MountainNode extends Node {
-  sprite() {
-    const stone = { r: 100, g: 100, b: 100 };
+  sprite(brightness = 1) {
+    const stone = {
+      r: 100 * brightness,
+      g: 100 * brightness,
+      b: 100 * brightness,
+    };
     return [
       { character: " ", backgroundColor: stone },
       { character: " ", backgroundColor: stone },
