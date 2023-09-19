@@ -1,11 +1,11 @@
-import { UserInputTargets, select } from "../../deps.ts";
-import { AppManager } from "../../framework/app-manager.ts";
-import { Screen } from "../../framework/screen.ts";
-import { debug } from "../../main.ts";
-import { Save } from "../../save.ts";
-import { DockedMenu } from "./widgets/docked-menu.ts";
-import { InfoWidget } from "./widgets/info.ts";
-import { MapWidget } from "./widgets/map.ts";
+import { UserInputTargets, select } from "../deps.ts";
+import { AppManager } from "../framework/app-manager.ts";
+import { Screen } from "../framework/screen.ts";
+import { debug } from "../main.ts";
+import { Save } from "../misc/save.ts";
+import { DockedMenu } from "../widgets/docked-menu.ts";
+import { InfoWidget } from "../widgets/info.ts";
+import { MapWidget } from "../widgets/map.ts";
 
 export type PageProps = {
   save: Save;
@@ -73,7 +73,7 @@ export class OverviewPage extends Screen<PageProps> {
       newZIndexGroup: true,
     });
 
-    player.ship.onCollisionWithPort.subscribe((port) => {
+    player.ship.onCollisionWithPort.subscribe((port: any) => {
       debug.log(`Docked for provisions.`);
 
       this.addWidget(

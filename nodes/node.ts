@@ -1,6 +1,6 @@
-import { Coordinate } from "../coordinate.ts";
 import { Point } from "../deps.ts";
-import { SubscribableEvent } from "../subscribable-event.ts";
+import { Coordinate } from "../misc/coordinate.ts";
+import { SubscribableEvent } from "../misc/subscribable-event.ts";
 import { NodeManager } from "./node-manager.ts";
 
 export type PointTraits = Omit<Point, "zIndex" | "coordinate">;

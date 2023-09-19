@@ -1,6 +1,6 @@
-import { CompassDirection, Coordinate } from "../coordinate.ts";
-import { SubscribableEvent } from "../subscribable-event.ts";
-import { Time } from "../time.ts";
+import { CompassDirection, Coordinate } from "../misc/coordinate.ts";
+import { SubscribableEvent } from "../misc/subscribable-event.ts";
+import { Time } from "../misc/time.ts";
 import { CoastalNode, Port } from "./map/coastal-node.ts";
 import { Node } from "./node.ts";
 

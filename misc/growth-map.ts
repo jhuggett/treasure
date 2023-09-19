@@ -1,5 +1,5 @@
+import { KDTree, Random, Squirrel3, KDTreeInput } from "../deps.ts";
 import { Coordinate } from "./coordinate.ts";
-import { KDTree, KDTreeInput, Random, Squirrel3 } from "./deps.ts";
 
 export enum LandType {
   land,

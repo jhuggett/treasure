@@ -1,6 +1,6 @@
-import { Camera } from "../camera.ts";
-import { Coordinate } from "../coordinate.ts";
 import { KDTree } from "../deps.ts";
+import { Camera } from "../misc/camera.ts";
+import { Coordinate } from "../misc/coordinate.ts";
 import { Node } from "./node.ts";
 
 export class NodeManager {

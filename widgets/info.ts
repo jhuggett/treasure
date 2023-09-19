@@ -1,9 +1,8 @@
-import { margined, portion } from "../../../../terminal/mod.ts";
-import { Box, UserInputTargets } from "../../../deps.ts";
-import { Widget } from "../../../framework/widget.ts";
-import { debug } from "../../../main.ts";
-import { BulkItem } from "../../../nodes/ship-node.ts";
-import { Save } from "../../../save.ts";
+import { portion, margined } from "../../terminal/mod.ts";
+import { Box, UserInputTargets } from "../deps.ts";
+import { Widget } from "../framework/widget.ts";
+import { Save } from "../misc/save.ts";
+import { BulkItem } from "../nodes/ship-node.ts";
 
 export type InfoWidgetProps = {
   save: Save;

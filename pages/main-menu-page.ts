@@ -1,9 +1,9 @@
-import { UserInputTargets } from "../../deps.ts";
-import { AppManager } from "../../framework/app-manager.ts";
-import { Screen } from "../../framework/screen.ts";
-import { Save } from "../../save.ts";
-import { LoadingPage } from "../loading/page.ts";
-import { MainMenuWidget } from "./widgets/menu.ts";
+import { UserInputTargets } from "../deps.ts";
+import { AppManager } from "../framework/app-manager.ts";
+import { Screen } from "../framework/screen.ts";
+import { Save } from "../misc/save.ts";
+import { MainMenuWidget } from "../widgets/menu.ts";
+import { LoadingPage } from "./loading-page.ts";
 
 export class MainMenuPage extends Screen<void> {
   onInput: UserInputTargets = {

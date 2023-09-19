@@ -1,12 +1,12 @@
-import { Coordinate } from "../../coordinate.ts";
-import { UserInputTargets } from "../../deps.ts";
-import { AppManager } from "../../framework/app-manager.ts";
-import { Screen } from "../../framework/screen.ts";
-import { debug } from "../../main.ts";
-import { Money, Provisions, Ship } from "../../nodes/ship-node.ts";
-import { Save } from "../../save.ts";
-import { OverviewPage } from "../overview/page.ts";
-import { SpinnerWidget } from "./widgets/spinner.ts";
+import { UserInputTargets } from "../deps.ts";
+import { AppManager } from "../framework/app-manager.ts";
+import { Screen } from "../framework/screen.ts";
+import { debug } from "../main.ts";
+import { Coordinate } from "../misc/coordinate.ts";
+import { Save } from "../misc/save.ts";
+import { Ship, Provisions, Money } from "../nodes/ship-node.ts";
+import { SpinnerWidget } from "../widgets/spinner.ts";
+import { OverviewPage } from "./overview-page.ts";
 
 export type LoadingPageProps = {
   save: Save;

@@ -1,9 +1,9 @@
-import { Squirrel3 } from "./deps.ts";
+import { Squirrel3 } from "../deps.ts";
+import { CoastalNode, Port } from "../nodes/map/coastal-node.ts";
+import { MapNodeFactory } from "../nodes/map/factory.ts";
+import { NodeManager } from "../nodes/node-manager.ts";
+import { Ship } from "../nodes/ship-node.ts";
 import { Landmass, GrowthMap } from "./growth-map.ts";
-import { CoastalNode, Port } from "./nodes/map/coastal-node.ts";
-import { MapNodeFactory } from "./nodes/map/factory.ts";
-import { NodeManager } from "./nodes/node-manager.ts";
-import { Ship } from "./nodes/ship-node.ts";
 
 export class WorldMap {
   nodeManager?: NodeManager;
@@ -89,7 +89,7 @@ export class WorldMap {
 
     const portNodeNeighbors = portNode.currentPosition.adjacentCoors;
 
-    const availableWater = portNodeNeighbors.filter((coor) => {
+    const availableWater = portNodeNeighbors.filter((coor: any) => {
       return !this.nodeManager?.checkCollision(coor);
     });
 

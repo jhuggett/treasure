@@ -1,5 +1,5 @@
-import { Box, UserInputTargets } from "../../../deps.ts";
-import { Widget } from "../../../framework/widget.ts";
+import { UserInputTargets, Box } from "../deps.ts";
+import { Widget } from "../framework/widget.ts";
 
 export type SpinnerProps = {};
 

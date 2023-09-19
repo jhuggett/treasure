@@ -1,9 +1,8 @@
-import { margined } from "../../../../terminal/mod.ts";
-import { Box, UserInputTargets } from "../../../deps.ts";
-import { Widget } from "../../../framework/widget.ts";
-import { debug } from "../../../main.ts";
-import { Money, Provisions } from "../../../nodes/ship-node.ts";
-import { Save } from "../../../save.ts";
+import { margined } from "../../terminal/mod.ts";
+import { Box, UserInputTargets } from "../deps.ts";
+import { Widget } from "../framework/widget.ts";
+import { Save } from "../misc/save.ts";
+import { Money, Provisions } from "../nodes/ship-node.ts";
 
 export type DockedMenuWidgetProps = {
   save: Save;

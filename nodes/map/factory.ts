@@ -1,5 +1,5 @@
-import { Coordinate } from "../../coordinate.ts";
-import { LandmassPoint, LandType } from "../../growth-map.ts";
+import { Coordinate } from "../../misc/coordinate.ts";
+import { LandmassPoint, LandType } from "../../misc/growth-map.ts";
 import { CoastalNode } from "./coastal-node.ts";
 import { LandNode } from "./land-node.ts";
 import { MountainNode } from "./mountain-node.ts";

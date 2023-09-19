@@ -1,12 +1,11 @@
-import { portion } from "../../../../terminal/mod.ts";
-import { Camera } from "../../../camera.ts";
-import { Coordinate } from "../../../coordinate.ts";
-import { Box, UserInputTargets } from "../../../deps.ts";
-import { Widget } from "../../../framework/widget.ts";
-import { debug } from "../../../main.ts";
-import { NodeManager } from "../../../nodes/node-manager.ts";
-import { Ship } from "../../../nodes/ship-node.ts";
-import { Time } from "../../../time.ts";
+import { portion } from "../../terminal/mod.ts";
+import { Box, UserInputTargets } from "../deps.ts";
+import { Widget } from "../framework/widget.ts";
+import { Camera } from "../misc/camera.ts";
+import { Coordinate } from "../misc/coordinate.ts";
+import { Time } from "../misc/time.ts";
+import { NodeManager } from "../nodes/node-manager.ts";
+import { Ship } from "../nodes/ship-node.ts";
 
 export type MapWidgetProps = {
   nodeManager: NodeManager;
@@ -66,19 +65,19 @@ export class MapWidget extends Widget<MapWidgetProps> {
   draw() {
     this.nodeView.clear();
 
-    // if (this.focused && this._bg_was_focused !== true) {
-    //   this.backgroundView.fill({
-    //     character: " ",
-    //     backgroundColor: { r: 0, g: 0, b: 175 },
-    //   });
-    //   this._bg_was_focused = true;
-    // } else if (!this.focused && this._bg_was_focused !== false) {
-    //   this.backgroundView.fill({
-    //     character: " ",
-    //     backgroundColor: { r: 0, g: 0, b: 175 * 0.5 },
-    //   });
-    //   this._bg_was_focused = false;
-    // }
+    if (this.focused && this._bg_was_focused !== true) {
+      this.backgroundView.fill({
+        character: " ",
+        backgroundColor: { r: 0, g: 0, b: 175 },
+      });
+      this._bg_was_focused = true;
+    } else if (!this.focused && this._bg_was_focused !== false) {
+      this.backgroundView.fill({
+        character: " ",
+        backgroundColor: { r: 0, g: 0, b: 175 * 0.5 },
+      });
+      this._bg_was_focused = false;
+    }
 
     this.props.nodeManager.nodesInCameraView(this.camera).forEach((node) => {
       //if (!node.seen) return;

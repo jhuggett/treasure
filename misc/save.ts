@@ -1,4 +1,4 @@
-import { Squirrel3 } from "./deps.ts";
+import { Squirrel3 } from "../deps.ts";
 import { Player } from "./player.ts";
 import { Time } from "./time.ts";
 import { WorldMap } from "./world-map.ts";

@@ -1,5 +1,5 @@
+import { Node } from "../nodes/node.ts";
 import { Coordinate } from "./coordinate.ts";
-import { Node } from "./nodes/node.ts";
 
 export class Camera {
   public position: Coordinate;

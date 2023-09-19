@@ -1,6 +1,6 @@
 import { DenoShell } from "./deps.ts";
 import { TreasureAppManager } from "./app-manager.ts";
-import { MainMenuPage } from "./pages/main-menu/page.ts";
+import { MainMenuPage } from "./pages/main-menu-page.ts";
 
 const setup = (shell: DenoShell) => {
   shell.setRaw(true);
